@@ -4,9 +4,23 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pap-verifier"
-version = "0.1.0"
-description = "PAP v0.1 independent verifier (Phase 2a)"
+version = "0.1.0a2"
+description = "PAP v0.1 independent verifier (Phase 2a experimental)"
+readme = "README.md"
 requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Agent Federation contributors" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Quality Assurance",
+]
+keywords = ["PAP", "assurance", "verification", "Phase 2a"]
+
+[project.urls]
+Repository = "https://github.com/agent-federation/contract-builder-independent-py-v2"
+Evidence = "https://github.com/agent-federation/blind-lab"
 
 [project.scripts]
 pap = "pap_verifier.cli:main"
