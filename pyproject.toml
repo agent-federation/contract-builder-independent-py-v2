@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pap-verifier"
+version = "0.1.0"
+description = "PAP v0.1 independent verifier (Phase 2a)"
+requires-python = ">=3.11"
+
+[project.scripts]
+pap = "pap_verifier.cli:main"
+pap-verify = "pap_verifier.cli:main"
+
+[tool.setuptools]
+packages = ["pap_verifier"]
