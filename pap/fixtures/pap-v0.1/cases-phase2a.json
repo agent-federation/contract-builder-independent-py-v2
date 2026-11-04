@@ -1,0 +1,351 @@
+{
+  "caseSetVersion": "2a.1",
+  "phase": "2a",
+  "normativeStatus": "experiment-scope; cases.json remains the normative §12 corpus",
+  "basis": {
+    "rfc": "docs/architecture/portable-assurance-package-rfc.md §14 step 2a",
+    "brief": "AGENT_BRIEF.md §4.1–4.6 and §5",
+    "sourceCommit": "c6ee64416c91ab56f9d8270114c8f8a8b9d2f608",
+    "caseSetOrigin": "source",
+    "caseSetCommit": "26b99826205ad0d29b4a0cb91f87d0718f4fdd6e",
+    "caseSetCommitNote": "authoring base; the bundle manifest records the containing source commit",
+    "casesJson": {
+      "path": "pap/fixtures/pap-v0.1/cases.json",
+      "sha256": "8ae2693b34a31f1a49fdee0e5e5e235419e8d510d2a9b6f84e809b0c1ef154df"
+    }
+  },
+  "profiles": {
+    "full": {
+      "compare": [
+        "exitCode",
+        "verdict",
+        "diagnosticCodes: expected subset",
+        "dimensions: integrity.package, integrity.artifacts",
+        "packageIdentity: exact or relation"
+      ],
+      "doNotCompare": [
+        "checks",
+        "coverage.full",
+        "verifier",
+        "identities.checkerIdentity",
+        "identities.verificationRecordIdentity",
+        "evaluatedAt",
+        "text output"
+      ],
+      "diagnosticCodePolicy": "check-family codes (pap.check.*) are not compared in 2a; applicableDiagnosticCodes is the expected subset, not the complete cases.json set"
+    },
+    "identityOnly": {
+      "compare": [
+        "packageIdentity"
+      ]
+    },
+    "excluded": {
+      "compare": []
+    }
+  },
+  "summary": {
+    "full": 19,
+    "identityOnly": 36,
+    "excluded": 6,
+    "total": 61
+  },
+  "cases": {
+    "F01-unchanged": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F02-artifact-byte": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F03-source-byte": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F04-input-byte": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F05-quote-span": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:90bbfcccfa81920d0883d0c17e7067305518dc8fad48761c7e8cee6ccb8608d1"
+    },
+    "F06-relation-edge": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:6430587d9f1d0b0a98979ee2aa9850b882b2531cb76940e55e0b146a6dd3afed"
+    },
+    "F07-unknown-check": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [],
+      "packageIdentity": "sha256:55058e310ee2a1b9b0f6e13f8807e8cca48b7d6bdcdbfc685f9c935907872552"
+    },
+    "F08-critical-extension": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.extension.critical-unsupported"
+      ],
+      "packageIdentity": "sha256:dd62941363582d900ef34216fff2bab7ee5cec1a1a1d0f99f56e4d52e7c34662"
+    },
+    "F09-newer-check": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [],
+      "packageIdentity": "sha256:4983f4535f40e7e03dcc5fdc85a2a44bd8bbcd48c95479e8efc53eaac5155d9b"
+    },
+    "F10-newer-minor": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.compat.minor-newer"
+      ],
+      "packageIdentity": "sha256:4389504d67eef2e6ad5d12a0d04cd3a508dd42ca4ec5e26c3c479ec3bd7c5be8"
+    },
+    "F11-untrusted-role": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F12-invalid-signature": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F13-trusted-signature": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F14-no-policy": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F15-stale-policy": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F16-unknown-signer": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F17-package-not-allowed": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F18-two-envelopes": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F19-required-signature-absent": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F20-producer-mismatch": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F21-truncated-manifest": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.manifest-json"
+      ],
+      "packageIdentity": null
+    },
+    "F22-path-traversal": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.path-invalid"
+      ],
+      "packageIdentity": "sha256:c59d3b6d584009d51e0f6bca3e8a132844e6e1d3ae03c6e99591a8c33151b104"
+    },
+    "F23-symlink": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.symlink"
+      ],
+      "packageIdentity": "sha256:48049594c1f084fa6693e1e07148b21a4842502f75ceb9b8040b1b30da2008e5"
+    },
+    "F24-case-duplicate": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.path-duplicate"
+      ],
+      "packageIdentity": "sha256:602ef24f955e7285982356f9445ab800e22504c0ba264f2475a054ba56aa7778"
+    },
+    "F25-archive": {
+      "profile": "excluded",
+      "owningPhase": "2c"
+    },
+    "F26-missing-artifact": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.declared-file-missing"
+      ],
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F27-referenced-source": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:6bd1c79fb00cd96e4782a594b2875eac81f9afdc812b58e1432e2753826caa44"
+    },
+    "F28-review-missing": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F29-duplicate-key": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.duplicate-key"
+      ],
+      "packageIdentity": null
+    },
+    "F30-unknown-field": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.unknown-field"
+      ],
+      "packageIdentity": "sha256:b95246443fbece8489b9cd46b1c382a0895b61bbb7a03a65ad6610c92af7a465"
+    },
+    "F31-undeclared-file": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F32-optional-extension": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:8612a147184c9bb6db19428205154d1e0ca428900ebcc9463f0c4c37dbd77d88"
+    },
+    "F33-required-feature": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.feature.unsupported"
+      ],
+      "packageIdentity": "sha256:e64a5844cca90fa1d2cd5c96fe1188da75e1d1f1d63bb5b1ac68c9283a13c206"
+    },
+    "F34-noncanonical": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F35-manifest-limit": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.limit-exceeded"
+      ],
+      "packageIdentity": null
+    },
+    "F36-determinism": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F37-inspect-usage": {
+      "profile": "excluded",
+      "owningPhase": "2c"
+    },
+    "F38-explain-usage": {
+      "profile": "excluded",
+      "owningPhase": "2c"
+    },
+    "F39-explain-unknown": {
+      "profile": "excluded",
+      "owningPhase": "2c"
+    },
+    "F40-producer-free": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F41-invalid-policy": {
+      "profile": "excluded",
+      "owningPhase": "2c"
+    },
+    "F42-explain-positive": {
+      "profile": "excluded",
+      "owningPhase": "2c"
+    },
+    "F43-profile-mismatch": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:804560f61d1c5a6cee6fcb101ef4088df24179b1ed3bedfaa8173a2ef71dda8c"
+    },
+    "F44-no-provenance": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:9dccc020e94c2a2250caf8b5ea255d0638a53a2b7164d6560d99a1a8906ba21c"
+    },
+    "F45-no-relations": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:4a1fe441eb4fdab141b689e48af14c257be6851d461ca86bbc6f08c41c6080ee"
+    },
+    "F46-inverse-not-reciprocal": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:861e2ae4b91cb347e3a19f9e501e67219d6f776864a906ce513ba232b146967e"
+    },
+    "F47-policy-boundary-expiry": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F48-policy-boundary-issued": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F49-policy-one-second-after": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F50-bom": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.manifest-json"
+      ],
+      "packageIdentity": null
+    },
+    "F51-exponent-number": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.manifest-json"
+      ],
+      "packageIdentity": null
+    },
+    "F52-lowered-limits": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F53-check-version": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.schema"
+      ],
+      "packageIdentity": "sha256:5728aa427d67e448d0a5802760c734627cbab20c86614c8107201c241a90df7c"
+    },
+    "F54-all-optional": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.empty-check-specs"
+      ],
+      "packageIdentity": "sha256:5135fb69f88dc8f36422f846963db974c44e0503056c96c4a2b4a021a80ae365"
+    },
+    "F55-review-approved": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:6e5ca77778f45a060fd7fda00c1950e7bc64392cd55ed3f054c7e26754e53670"
+    },
+    "F56-optional-mixed": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+    },
+    "F57-major-version": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.compat.version-unsupported"
+      ],
+      "packageIdentity": "sha256:4cdc8f72b94c72f88ba52ab26ce6765412e2b39f45c3badd7c7596476a2ec9b8"
+    },
+    "F58-undeclared-source": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:943d9196a31bb322d421eff9447b136234f0bd0ed4b247c0a9613a0d510dd998"
+    },
+    "F59-relation-duplicate": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:be227cd044ae034450ef5ab217d3f161825d12ce2649a831a97dcc197c83234e"
+    },
+    "F60-missing-manifest": {
+      "profile": "full",
+      "applicableDiagnosticCodes": [
+        "pap.package.io"
+      ],
+      "packageIdentity": null
+    },
+    "F61-relations-only-lowered": {
+      "profile": "identityOnly",
+      "packageIdentity": "sha256:0955f1f709939b165d42762d5a6908c989cbf7c3d42a2e9ecea159acea4c8ac8"
+    }
+  }
+}

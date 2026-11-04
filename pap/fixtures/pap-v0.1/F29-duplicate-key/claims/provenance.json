@@ -1,0 +1,1 @@
+{"bindings":[{"entityId":"REQ-001","id":"binding:REQ-001","locator":{"end":76,"kind":"byte-range","start":24},"quote":{"digest":"sha256:619cb81063fff535c31b93b66e274e6df0a1cef4582d17c7a6362c98fac48909","normalization":"none"},"sourceId":"SRC-ACME-POLICY"}],"papClaimsVersion":"0.1"}

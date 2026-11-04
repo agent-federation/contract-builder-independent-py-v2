@@ -1,0 +1,27 @@
+{
+  "trustPolicyVersion": "0.1",
+  "id": "policy-acme-unsigned-2026-11",
+  "issuedAt": "2026-11-01T00:00:00Z",
+  "expiresAt": "2026-12-01T00:00:00Z",
+  "signature": {
+    "mode": "disabled"
+  },
+  "keys": [],
+  "signers": [],
+  "checkers": [],
+  "profiles": [],
+  "requiredChecks": [
+    "pap.check.digest-integrity/1",
+    "pap.check.source-quote/1",
+    "pap.check.relation-consistency/1"
+  ],
+  "requiredDimensions": [
+    "integrity",
+    "sources",
+    "checks"
+  ],
+  "humanReview": {
+    "required": false,
+    "maxAgeSeconds": 2592000
+  }
+}

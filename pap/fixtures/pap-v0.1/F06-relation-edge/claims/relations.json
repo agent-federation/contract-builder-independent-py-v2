@@ -1,0 +1,1 @@
+{"edges":[{"from":"REQ-001","relation":"derivedFrom","to":"REQ-002"},{"from":"REQ-002","relation":"derives","to":"REQ-001"}],"entities":[{"id":"REQ-001","kind":"requirement"}],"papClaimsVersion":"0.1","relations":[{"from":"requirement","inverse":"derives","name":"derivedFrom","to":"requirement"},{"from":"requirement","inverse":"derivedFrom","name":"derives","to":"requirement"}]}

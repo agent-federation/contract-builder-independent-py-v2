@@ -1,0 +1,1 @@
+{"papClaimsVersion":"0.1","approvals":[{"id":"approval:acme:1","reviewer":{"identity":"alice"},"decision":"approved","decidedAt":"2026-11-02T00:00:00Z","scope":{"artifacts":["artifact:acme-supplier"]}}]}

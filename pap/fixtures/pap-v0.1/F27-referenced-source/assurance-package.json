@@ -1,0 +1,87 @@
+{
+  "papVersion": "0.1",
+  "package": {
+    "id": "urn:pap:acme-supplier:2026-01",
+    "title": "ACME supplier assurance package",
+    "createdAt": "2026-11-02T00:00:00Z",
+    "producer": {
+      "name": "contract-builder",
+      "version": "0.1.0"
+    }
+  },
+  "subject": {
+    "projectId": "acme-supplier",
+    "revision": "1.0.0"
+  },
+  "build": {
+    "engineVersion": "0.1.0",
+    "manifestVersion": "0.1",
+    "normalizedInputDigest": "sha256:fccf755793cf1a1b7982631c201282669924cdcf9d6b171bdff26513fc64d80b"
+  },
+  "artifacts": [
+    {
+      "id": "artifact:acme-supplier",
+      "path": "artifacts/ACME-SUPPLIER.draft.md",
+      "mediaType": "text/markdown; charset=utf-8",
+      "bytes": 80,
+      "digest": "sha256:5f521a6b5bedacdf8d3536f8fb509bef6e829bfb537b1ec818cb38a8e1a2dd51"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "input:project",
+      "path": "inputs/project.yml",
+      "mediaType": "application/yaml",
+      "digest": "sha256:2da40818408dec8fe7d63c86cb8e67fbc624c743a7d81b02535f318b80cb08ff",
+      "normalization": "lf"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-ACME-POLICY",
+      "mediaType": "text/markdown; charset=utf-8",
+      "digest": "sha256:d7a4ee24615f562232172021f3c992fa1a5aed7a2ae9c128446101ed8f46eecd",
+      "acquiredAt": "2026-11-01T12:00:00Z",
+      "acquisition": {
+        "method": "git",
+        "uri": "https://example.invalid/acme/policy.git",
+        "revision": "0f1e2d3c4b5a69788796a5b4c3d2e1f0"
+      }
+    }
+  ],
+  "claims": {
+    "provenance": {
+      "path": "claims/provenance.json",
+      "digest": "sha256:8044adf1df927b30e67e743d6ca348a8f197f8af4e9e7cc668ebf525e6e7b95b"
+    },
+    "relations": {
+      "path": "claims/relations.json",
+      "digest": "sha256:992cd64e230f2480a88ab7128d802796abfbd44605809ba52cb16828559f83ab"
+    },
+    "producerReport": {
+      "path": "claims/producer-report.json",
+      "digest": "sha256:f45a69883bed0d0e62c69c7ff0105e902f86006e89c56d77cef1cc9630846e95"
+    }
+  },
+  "profile": {
+    "id": "acme-supplier",
+    "version": "0.1.0"
+  },
+  "checkSpecs": [
+    {
+      "id": "pap.check.digest-integrity/1",
+      "version": "1",
+      "required": true
+    },
+    {
+      "id": "pap.check.source-quote/1",
+      "version": "1",
+      "required": true
+    },
+    {
+      "id": "pap.check.relation-consistency/1",
+      "version": "1",
+      "required": true
+    }
+  ]
+}

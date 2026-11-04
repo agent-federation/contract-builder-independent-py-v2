@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:pap:0.1:explanation",
+  "title": "Portable Assurance Package v0.1 explanation document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["explanationVersion", "package", "checkRecord", "limitations"],
+  "properties": {
+    "explanationVersion": { "const": "0.1" },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity", "papVersion", "path"],
+      "properties": {
+        "identity": { "oneOf": [{ "$ref": "#/$defs/digest" }, { "type": "null" }] },
+        "papVersion": { "type": ["string", "null"] },
+        "path": { "type": "string" }
+      }
+    },
+    "checkRecord": {
+      "oneOf": [{ "$ref": "urn:pap:0.1:check-record" }, { "type": "null" }]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "detail"],
+        "properties": {
+          "code": { "type": "string", "pattern": "^pap\\.[a-z0-9.-]+$" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

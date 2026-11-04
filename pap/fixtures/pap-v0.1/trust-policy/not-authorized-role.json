@@ -1,0 +1,49 @@
+{
+  "trustPolicyVersion": "0.1",
+  "id": "policy-acme-role-2026-11",
+  "issuedAt": "2026-11-01T00:00:00Z",
+  "expiresAt": "2026-12-01T00:00:00Z",
+  "signature": {
+    "mode": "required",
+    "minimumValidSigners": 1
+  },
+  "keys": [
+    {
+      "keyId": "key-acme-producer",
+      "algorithm": "ed25519",
+      "publicKey": "qvjUXpW3TPLBcXB1d3tDfQrcqxN7vnfsnaiCBZKO7ns"
+    }
+  ],
+  "signers": [
+    {
+      "keyIds": [
+        "key-acme-producer"
+      ],
+      "identity": "acme-producer",
+      "allowedRoles": [
+        "reviewer"
+      ],
+      "allowedPackageIds": [
+        "urn:pap:acme-supplier:2026-01"
+      ],
+      "allowedPackageIdentities": [
+        "sha256:77a8d1d0882428efdfa5bfc38faa1ff7ba772aff9373b9e6135a8bb744119020"
+      ]
+    }
+  ],
+  "checkers": [],
+  "profiles": [],
+  "requiredChecks": [
+    "pap.check.digest-integrity/1",
+    "pap.check.source-quote/1",
+    "pap.check.relation-consistency/1"
+  ],
+  "requiredDimensions": [
+    "signature",
+    "trust"
+  ],
+  "humanReview": {
+    "required": false,
+    "maxAgeSeconds": 2592000
+  }
+}

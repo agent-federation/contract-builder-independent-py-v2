@@ -1,0 +1,1547 @@
+{
+  "fixtureSetVersion": "0.1",
+  "baseCase": "F01",
+  "cases": [
+    {
+      "caseId": "F01-unchanged",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true,
+        "identityRelations": {
+          "packageIdentity": "equals-base"
+        }
+      }
+    },
+    {
+      "caseId": "F02-artifact-byte",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.artifacts": "FAIL",
+          "checks": {
+            "pap.check.digest-integrity/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.integrity.artifact-mismatch"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F03-source-byte",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "sources.integrity": "FAIL",
+          "checks": {
+            "pap.check.digest-integrity/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.integrity.source-mismatch"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F04-input-byte",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "checks": {
+            "pap.check.digest-integrity/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.integrity.input-mismatch"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F05-quote-span",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "sources.integrity": "PASS",
+          "checks": {
+            "pap.check.digest-integrity/1": "PASS",
+            "pap.check.source-quote/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.check.quote-mismatch"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F06-relation-edge",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.digest-integrity/1": "PASS",
+            "pap.check.relation-consistency/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.claim.edge-unknown-entity"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F07-unknown-check",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {
+          "checks": {
+            "pap.check.unknown/1": "UNSUPPORTED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.check.unsupported"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F08-critical-extension",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {
+          "integrity.package": "PASS"
+        },
+        "diagnosticCodes": [
+          "pap.extension.critical-unsupported"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F09-newer-check",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.digest-integrity/1": "PASS",
+            "pap.check.digest-integrity/2": "UNSUPPORTED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.check.unsupported"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F10-newer-minor",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.digest-integrity/1": "NOT_EVALUATED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.compat.minor-newer",
+          "pap.check.not-evaluated"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F11-untrusted-role",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/not-authorized-role.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 3,
+        "verdict": "UNTRUSTED",
+        "dimensions": {
+          "signature.validity": "VALID",
+          "trust.signerIdentity": "UNTRUSTED",
+          "trust.policyDecision": "REJECTED"
+        },
+        "diagnosticCodes": [
+          "pap.trust.signer-untrusted"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F12-invalid-signature",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/signature-required.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "signature.validity": "INVALID"
+        },
+        "diagnosticCodes": [
+          "pap.signature.invalid"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F13-trusted-signature",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/signature-required.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {
+          "signature.validity": "VALID",
+          "trust.signerIdentity": "TRUSTED",
+          "trust.policyDecision": "ACCEPTED"
+        },
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F14-no-policy",
+      "command": [
+        "verify",
+        ".",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {
+          "signature.validity": "NOT_APPLICABLE",
+          "trust.policyDecision": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.trust.policy-absent"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F15-stale-policy",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/expired.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "signature.validity": "VALID",
+          "trust.signerIdentity": "TRUSTED",
+          "trust.policyDecision": "STALE"
+        },
+        "diagnosticCodes": [
+          "pap.trust.policy-stale"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F16-unknown-signer",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unknown-signer.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 3,
+        "verdict": "UNTRUSTED",
+        "dimensions": {
+          "signature.validity": "NOT_EVALUATED",
+          "trust.signerIdentity": "UNKNOWN",
+          "trust.policyDecision": "REJECTED"
+        },
+        "diagnosticCodes": [
+          "pap.trust.signer-unknown"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F17-package-not-allowed",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/package-not-allowed.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 3,
+        "verdict": "UNTRUSTED",
+        "dimensions": {
+          "signature.validity": "VALID",
+          "trust.policyDecision": "REJECTED"
+        },
+        "diagnosticCodes": [
+          "pap.trust.package-not-allowed"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F18-two-envelopes",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unknown-signer.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 3,
+        "verdict": "UNTRUSTED",
+        "dimensions": {
+          "signature.validity": "VALID",
+          "trust.policyDecision": "REJECTED"
+        },
+        "diagnosticCodes": [
+          "pap.trust.signer-unknown"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F19-required-signature-absent",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/signature-required.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "signature.validity": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.signature.absent"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F20-producer-mismatch",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.artifacts": "FAIL",
+          "checks": {
+            "pap.check.digest-integrity/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.integrity.artifact-mismatch",
+          "pap.claims.producer-mismatch"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F21-truncated-manifest",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.manifest-json"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "identityRelations": {
+          "packageIdentity": null
+        }
+      }
+    },
+    {
+      "caseId": "F22-path-traversal",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "FAIL"
+        },
+        "diagnosticCodes": [
+          "pap.package.path-invalid"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F23-symlink",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "FAIL"
+        },
+        "diagnosticCodes": [
+          "pap.package.symlink"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F24-case-duplicate",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "FAIL"
+        },
+        "diagnosticCodes": [
+          "pap.package.path-duplicate"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F25-archive",
+      "command": [
+        "verify",
+        "../archive.tar"
+      ],
+      "noReport": true,
+      "stderrCodes": [
+        "pap.cli.usage"
+      ]
+    },
+    {
+      "caseId": "F26-missing-artifact",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "FAIL",
+          "checks": {
+            "pap.check.digest-integrity/1": "NOT_EVALUATED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.package.declared-file-missing",
+          "pap.check.not-evaluated"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F27-referenced-source",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "sources.integrity": "UNAVAILABLE",
+          "sources.availability": "UNAVAILABLE",
+          "checks": {
+            "pap.check.digest-integrity/1": "NOT_EVALUATED",
+            "pap.check.source-quote/1": "NOT_EVALUATED",
+            "pap.check.relation-consistency/1": "PASS"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.source.unavailable",
+          "pap.check.not-evaluated"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F28-review-missing",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/review-required.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "humanReview.status": "INCOMPLETE"
+        },
+        "diagnosticCodes": [
+          "pap.review.missing"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F29-duplicate-key",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.duplicate-key"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F30-unknown-field",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.unknown-field"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F31-undeclared-file",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [
+          "pap.package.undeclared-file"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F32-optional-extension",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [
+          "pap.extension.ignored"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F33-required-feature",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {},
+        "diagnosticCodes": [
+          "pap.feature.unsupported"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F34-noncanonical",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true,
+        "identityRelations": {
+          "packageIdentity": "equals-base"
+        }
+      }
+    },
+    {
+      "caseId": "F35-manifest-limit",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.limit-exceeded"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "identityRelations": {
+          "packageIdentity": null
+        }
+      }
+    },
+    {
+      "caseId": "F36-determinism",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F37-inspect-usage",
+      "command": [
+        "inspect",
+        "../base",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json"
+      ],
+      "noReport": true,
+      "stderrCodes": [
+        "pap.cli.usage"
+      ]
+    },
+    {
+      "caseId": "F38-explain-usage",
+      "command": [
+        "explain",
+        "../base"
+      ],
+      "noReport": true,
+      "stderrCodes": [
+        "pap.cli.usage"
+      ]
+    },
+    {
+      "caseId": "F39-explain-unknown",
+      "command": [
+        "explain",
+        "../base",
+        "--check",
+        "pap.check.absent/1"
+      ],
+      "noReport": true,
+      "stderrCodes": [
+        "pap.cli.unknown-check"
+      ]
+    },
+    {
+      "caseId": "F40-producer-free",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F41-invalid-policy",
+      "command": [
+        "verify",
+        "../base",
+        "--trust-policy",
+        "../trust-policy/invalid.json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "noReport": true,
+      "stderrCodes": [
+        "pap.trust.policy-invalid"
+      ]
+    },
+    {
+      "caseId": "F42-explain-positive",
+      "command": [
+        "explain",
+        "../base",
+        "--check",
+        "pap.check.digest-integrity/1",
+        "--format",
+        "json"
+      ],
+      "document": "explanation",
+      "expect": {
+        "exitCode": 0,
+        "checkOutcome": "PASS",
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F43-profile-mismatch",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/profile-pinned.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {
+          "trust.profileRecognition": "UNSUPPORTED"
+        },
+        "diagnosticCodes": [
+          "pap.trust.profile-unknown"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F44-no-provenance",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.digest-integrity/1": "PASS",
+            "pap.check.source-quote/1": "NOT_EVALUATED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.check.not-evaluated"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F45-no-relations",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.digest-integrity/1": "PASS",
+            "pap.check.source-quote/1": "PASS",
+            "pap.check.relation-consistency/1": "NOT_EVALUATED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.check.not-evaluated"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F46-inverse-not-reciprocal",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.relation-consistency/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.claim.inverse-not-reciprocal"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F47-policy-boundary-expiry",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-12-01T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F48-policy-boundary-issued",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-01T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {},
+        "diagnosticCodes": [],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F49-policy-one-second-after",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-12-01T00:00:01Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "trust.policyDecision": "STALE"
+        },
+        "diagnosticCodes": [
+          "pap.trust.policy-stale"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F50-bom",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.manifest-json"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "identityRelations": {
+          "packageIdentity": null
+        }
+      }
+    },
+    {
+      "caseId": "F51-exponent-number",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.manifest-json"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "identityRelations": {
+          "packageIdentity": null
+        }
+      }
+    },
+    {
+      "caseId": "F52-lowered-limits",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/lowered-limits.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "integrity.artifacts": "NOT_EVALUATED",
+          "checks": {
+            "pap.check.digest-integrity/1": "NOT_EVALUATED",
+            "pap.check.source-quote/1": "NOT_EVALUATED",
+            "pap.check.relation-consistency/1": "NOT_EVALUATED"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.package.limit-exceeded",
+          "pap.limit.lowered"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "effectiveLimits": {
+          "fileBytes": 64
+        }
+      }
+    },
+    {
+      "caseId": "F53-check-version",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.schema"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F54-all-optional",
+      "command": [
+        "verify",
+        ".",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {},
+        "diagnosticCodes": [
+          "pap.package.empty-check-specs"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F55-review-approved",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/review-required.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 0,
+        "verdict": "PASS",
+        "dimensions": {
+          "humanReview.status": "PASS"
+        },
+        "diagnosticCodes": [
+          "pap.review.unbound"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true,
+        "humanReviewBasis": "unbound-claim"
+      }
+    },
+    {
+      "caseId": "F56-optional-mixed",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/signature-optional.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 3,
+        "verdict": "UNTRUSTED",
+        "dimensions": {
+          "signature.validity": "VALID",
+          "trust.signerIdentity": "TRUSTED",
+          "trust.policyDecision": "REJECTED"
+        },
+        "diagnosticCodes": [
+          "pap.signature.invalid"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F57-major-version",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 4,
+        "verdict": "UNSUPPORTED",
+        "dimensions": {
+          "integrity.package": "PASS"
+        },
+        "diagnosticCodes": [
+          "pap.compat.version-unsupported",
+          "pap.check.not-evaluated"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F58-undeclared-source",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL"
+        },
+        "diagnosticCodes": [
+          "pap.package.claim-invalid"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false
+      }
+    },
+    {
+      "caseId": "F59-relation-duplicate",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "PASS",
+          "checks": {
+            "pap.check.relation-consistency/1": "FAIL"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.claim.relation-duplicate"
+        ],
+        "limitationCodes": [],
+        "coverageFull": true
+      }
+    },
+    {
+      "caseId": "F60-missing-manifest",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/unsigned-valid.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 1,
+        "verdict": "FAIL",
+        "dimensions": {
+          "integrity.package": "FAIL",
+          "integrity.artifacts": "NOT_EVALUATED"
+        },
+        "diagnosticCodes": [
+          "pap.package.io"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "identityRelations": {
+          "packageIdentity": null
+        }
+      }
+    },
+    {
+      "caseId": "F61-relations-only-lowered",
+      "command": [
+        "verify",
+        ".",
+        "--trust-policy",
+        "../trust-policy/relations-only-lowered.json",
+        "--format",
+        "json",
+        "--now",
+        "2026-11-02T00:00:00Z"
+      ],
+      "expect": {
+        "exitCode": 2,
+        "verdict": "INCOMPLETE",
+        "dimensions": {
+          "integrity.artifacts": "NOT_EVALUATED",
+          "checks": {
+            "pap.check.relation-consistency/1": "PASS"
+          }
+        },
+        "diagnosticCodes": [
+          "pap.package.limit-exceeded",
+          "pap.limit.lowered"
+        ],
+        "limitationCodes": [],
+        "coverageFull": false,
+        "effectiveLimits": {
+          "fileBytes": 64
+        }
+      }
+    }
+  ]
+}

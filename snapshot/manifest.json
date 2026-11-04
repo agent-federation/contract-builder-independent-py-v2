@@ -1,0 +1,2188 @@
+{
+  "format": "pap-independent-snapshot",
+  "pap_version": "0.1",
+  "source": {
+    "repository": "agent-federation/contract-builder",
+    "commit": "c21907890ceb45c5d3c4d72a0a736102b984815a"
+  },
+  "files": [
+    {
+      "path": "docs/architecture/portable-assurance-package-rfc.md",
+      "size": 410741,
+      "sha256": "799ebab9ea033827c3b1bffb97cf9a7add054b69f12b49e675b353cbadc8cb22"
+    },
+    {
+      "path": "docs/maintainer-decision.md",
+      "size": 2714,
+      "sha256": "f0611bbd733ec89852c6d0423c5d210c463a1a4f2f390cf14ab00a77d5441119"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F01-unchanged/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "cc19875322ee8e737afb931c76928a6d71a59ca33fa63e055aa36f037ba03497"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F02-artifact-byte/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F03-source-byte/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "237e2f9cb1beb1cd9032671e6155c9674b426780cf422870c53f859fd7c351e7"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/inputs/project.yml",
+      "size": 49,
+      "sha256": "fbc9b2a76b3d4257a98f6a9350573caa9606b9839610e5c066d192b0e7aa67d2"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F04-input-byte/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/assurance-package.json",
+      "size": 2408,
+      "sha256": "be044fefbf5cf5ffbd9ebb093e1373a3a37a33152a0612487d6b24e07fbcfe0b"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/claims/provenance.json",
+      "size": 282,
+      "sha256": "82101582751663da1ca8b19853ea1f9bcbd44a77da093ddd4d10a2d51ede1a38"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F05-quote-span/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/assurance-package.json",
+      "size": 2408,
+      "sha256": "7ba827b21da123e3a10f35659c9fce212e11297452403160cc4e4deba34f8945"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/claims/relations.json",
+      "size": 381,
+      "sha256": "b4c0f8dd8395f452df564959f29477144fe0f02f875542147a71af1665da5a4a"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F06-relation-edge/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/assurance-package.json",
+      "size": 2501,
+      "sha256": "f4a8aa53a9873467c13d16c7fea757b551769a23c972cf20c5598cce7357efbc"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F07-unknown-check/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/assurance-package.json",
+      "size": 2510,
+      "sha256": "4e7d2b0edac3ad80b10e5cb9b1ce10e0e490ab7f7fd6cdc0bf4d482d06a1626a"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F08-critical-extension/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/assurance-package.json",
+      "size": 2510,
+      "sha256": "d72674a803e1b1b9038c3035211f946197d529466671e345480d5228278b55af"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F09-newer-check/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/assurance-package.json",
+      "size": 2408,
+      "sha256": "e8dbd4f1200e3c158226e1161847a5f22b8f1d4f2c6fdd975e284d95729e4917"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F10-newer-minor/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F11-untrusted-role/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/signatures/invalid.dsse.json",
+      "size": 2711,
+      "sha256": "189652632ba305d6d14c66b41953f636064f934f8888a7068ecffff8a244c90f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F12-invalid-signature/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F13-trusted-signature/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F14-no-policy/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F15-stale-policy/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/signatures/unknown.dsse.json",
+      "size": 2705,
+      "sha256": "31ad3817e4303c2d13b4edb3c5c2c4a52ea82e3ae754f93fa794c21ab2dec7ae"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F16-unknown-signer/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F17-package-not-allowed/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/signatures/unknown.dsse.json",
+      "size": 2705,
+      "sha256": "31ad3817e4303c2d13b4edb3c5c2c4a52ea82e3ae754f93fa794c21ab2dec7ae"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F18-two-envelopes/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F19-required-signature-absent/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "cc19875322ee8e737afb931c76928a6d71a59ca33fa63e055aa36f037ba03497"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F20-producer-mismatch/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/assurance-package.json",
+      "size": 1165,
+      "sha256": "b97e81412a234ed6fee95ed11fd9f0760374d02290e7d90c3ea0832671bf5009"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F21-truncated-manifest/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/assurance-package.json",
+      "size": 2389,
+      "sha256": "a8f036a5191552995b8a82f739edb76489b693d10e9e41727694ef7e9dfb2a50"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F22-path-traversal/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F23-symlink/assurance-package.json",
+      "size": 2393,
+      "sha256": "e9aeddb25e1106683ce86d214b03a9cd31bf27e725abb00b27d3482c90234339"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F23-symlink/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F23-symlink/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F23-symlink/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F23-symlink/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F23-symlink/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/artifacts/A.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/artifacts/a.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/assurance-package.json",
+      "size": 2617,
+      "sha256": "8875c8ddadd37d6be75de912c8cd1c88b9d4a055ff1151459fedc75811bb2e50"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F24-case-duplicate/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F25-archive/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F26-missing-artifact/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F26-missing-artifact/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F26-missing-artifact/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F26-missing-artifact/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F26-missing-artifact/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F26-missing-artifact/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/assurance-package.json",
+      "size": 2368,
+      "sha256": "f3b07baf665e6fe24e79e39e1e46c961ab7eb4b02d11e569637dd418dc17735b"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F27-referenced-source/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F28-review-missing/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/assurance-package.json",
+      "size": 2375,
+      "sha256": "13d68a4df8596ab5a15c472d2be57f2791a057e67194976ab195811fde17fe3a"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F29-duplicate-key/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/assurance-package.json",
+      "size": 2436,
+      "sha256": "ab839bd08dced8e12c6801a2e361a94fab148b74e89a03555bbf2a7a36f47bdb"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F30-unknown-field/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/notes/extra.txt",
+      "size": 21,
+      "sha256": "d0b9e7dabec3c8db48f682fb38bf3962d2d9a4e500a65fce917e52b350122b05"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F31-undeclared-file/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/assurance-package.json",
+      "size": 2513,
+      "sha256": "502268799b0a67190c9566302036039dcccde4dd69eab9c64548ca7f34e6bad4"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F32-optional-extension/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/assurance-package.json",
+      "size": 2462,
+      "sha256": "987eed940bc65d44c31617530baad0b6314ce8cae3ee9fa1cdb8813addd4149e"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F33-required-feature/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/assurance-package.json",
+      "size": 2794,
+      "sha256": "3f36126eefdff82bf13c9636da45db6dc4950c410637a933b2864285b6ace7be"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F34-noncanonical/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/assurance-package.json",
+      "size": 1102377,
+      "sha256": "2aaa816959558e0f6f1caab9f7d69827019c831ed6f643c626744536211c8c5c"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F35-manifest-limit/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F36-determinism/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F37-inspect-usage/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F38-explain-usage/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F39-explain-unknown/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F40-producer-free/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F41-invalid-policy/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F42-explain-positive/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/assurance-package.json",
+      "size": 2408,
+      "sha256": "fc5a0448b6ff567e66eac4eb36b012f602f24da1f87d2a214403cec2f71b31b8"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F43-profile-mismatch/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F44-no-provenance/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F44-no-provenance/assurance-package.json",
+      "size": 2251,
+      "sha256": "41ac2ae50a9a7e5a1b4a9b556dee13d12921939400beb0ca2adbacbf9961f33d"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F44-no-provenance/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F44-no-provenance/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F44-no-provenance/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F44-no-provenance/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F45-no-relations/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F45-no-relations/assurance-package.json",
+      "size": 2253,
+      "sha256": "3c65cbddf1661d18a3a56af60010bc687ace2469dd109e2832f2e51e2d488114"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F45-no-relations/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F45-no-relations/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F45-no-relations/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F45-no-relations/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/assurance-package.json",
+      "size": 2408,
+      "sha256": "761a9a219b9117d65fc0c98a8d535fa273a725e4e718880402abd27009f80940"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/claims/relations.json",
+      "size": 395,
+      "sha256": "f04605da0db6f012f02adcf31b4b34c1d8eef5547fb3ba4cc8d059633469b0d9"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F46-inverse-not-reciprocal/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F47-policy-boundary-expiry/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F48-policy-boundary-issued/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F49-policy-one-second-after/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/assurance-package.json",
+      "size": 2335,
+      "sha256": "1cb1adb3ddb5c477b7fe126326a1b0fb1ecbab2a49d341b77de639bc375ce612"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F50-bom/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/assurance-package.json",
+      "size": 2333,
+      "sha256": "a7de3a97bd27c2a8a610e596c40a930b339097c52636b727cfc7364f4c1ecd89"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F51-exponent-number/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F52-lowered-limits/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/assurance-package.json",
+      "size": 2408,
+      "sha256": "7abc473ba8b7086f571d29730c6ff091c39261dcb3652fc0167231f0e41f0669"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F53-check-version/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/assurance-package.json",
+      "size": 2411,
+      "sha256": "1b5b638224792de56bc166c200ca3bb8a0bed76bbd27821089c12c11e9bc8eb6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F54-all-optional/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/assurance-package.json",
+      "size": 2559,
+      "sha256": "342d0f263b35f6df167c3bb93ad4bbad059bb9d14b77b3b814ecd969f085247a"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/claims/reviews.json",
+      "size": 203,
+      "sha256": "cdbe5969a4cb1f077f9b92b2c22780dd8254407cdf219515a6fbfdb2a3e94479"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F55-review-approved/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/signatures/invalid.dsse.json",
+      "size": 2711,
+      "sha256": "189652632ba305d6d14c66b41953f636064f934f8888a7068ecffff8a244c90f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F56-optional-mixed/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/assurance-package.json",
+      "size": 2408,
+      "sha256": "7cb0296da6dfcf07ecadca414bd9eaa73c642802b9201dc4cce16610b78ae69b"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F57-major-version/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/assurance-package.json",
+      "size": 2408,
+      "sha256": "e20c148160e4f58fcf744b8a1dbdd25cbd6ae5aa700c62f517c95bf87fe1e56d"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/claims/provenance.json",
+      "size": 278,
+      "sha256": "8e44a6b453cbced7b88659c83858d9fc566bc660f9b854d60400b35289cf84be"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F58-undeclared-source/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/assurance-package.json",
+      "size": 2408,
+      "sha256": "48fb2b9106f76ec41c13e239e4bca778022dcc563264b40d95f649767433afc6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/claims/relations.json",
+      "size": 502,
+      "sha256": "b634df7b3b79b29069f65ec7dda5ddd8cb227785c846fb32d98638a140a7d972"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F59-relation-duplicate/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F60-missing-manifest/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/assurance-package.json",
+      "size": 2410,
+      "sha256": "48cac84a16df5530a6861fda0e3fc0b0d2a05d31609f4ba1cc59d6d16333f0b0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/F61-relations-only-lowered/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/README.md",
+      "size": 2203,
+      "sha256": "38317887ad9ca7961629c61c36744fa755582939ac011fb4063f3e1f4c781f7e"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/archive.tar",
+      "size": 38,
+      "sha256": "81f5d80365e91b9fa4ae4be8202fa440181de22cf6e88d421a20a5b3d1d9f2a7"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/artifacts/ACME-SUPPLIER.draft.md",
+      "size": 80,
+      "sha256": "e7f0e9c305af7f1cfe6d550881e3aff095644697c168e82b473e41fee97e0347"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/assurance-package.json",
+      "size": 2332,
+      "sha256": "6fbea7f3c2604187ca5530fa0bf8865ecf959d012f608dd603ecb946007ea0e6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/claims/producer-report.json",
+      "size": 654,
+      "sha256": "5c1bf736366d20332f5a7da5944c06ca4158ef8b3a8b606c79f1d32db86ed0c0"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/claims/provenance.json",
+      "size": 282,
+      "sha256": "7095150d40757a080943b72217c515dedb6a31fad62d5e287b0eefcfcf3cefbf"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/claims/relations.json",
+      "size": 419,
+      "sha256": "07b9d51b8054ba4fccce875843abe719ea18843d822050485d658a3b00a62d2f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/inputs/project.yml",
+      "size": 49,
+      "sha256": "d214619d8a19cd28df83497fb1252a9c7e392cfd1725819f1472edf487140db1"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/base/sources/acme-policy.md",
+      "size": 127,
+      "sha256": "0ee2186aefd71928e6dcdddc8557734411cc6228fef31b2be82a7aaf7fa6c72f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/cases-phase2a.json",
+      "size": 12255,
+      "sha256": "4ac4a9440747296976e64a6fb0f35cb836419d78644c44ce2e9d582de3b319dc"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/cases.json",
+      "size": 35820,
+      "sha256": "8ae2693b34a31f1a49fdee0e5e5e235419e8d510d2a9b6f84e809b0c1ef154df"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/signatures/invalid.dsse.json",
+      "size": 2711,
+      "sha256": "189652632ba305d6d14c66b41953f636064f934f8888a7068ecffff8a244c90f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/signatures/trusted.dsse.json",
+      "size": 2711,
+      "sha256": "79e63e0a6650006302bfc7d6805170a7d44e738b087e382a585ab878d9e99424"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/signatures/unknown.dsse.json",
+      "size": 2705,
+      "sha256": "31ad3817e4303c2d13b4edb3c5c2c4a52ea82e3ae754f93fa794c21ab2dec7ae"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/expired.json",
+      "size": 1115,
+      "sha256": "9be6f1dac92289d9fe4e55cffb2414d7a50f370a0cecbd61a1dfab5f7fb2c852"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/invalid.json",
+      "size": 523,
+      "sha256": "fda16d53ebdb2bea56f24c57969c5b548ff2a1a4a2192e8c7ffb664fb118f89b"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/lowered-limits.json",
+      "size": 586,
+      "sha256": "5c2597c6ce6597e0f05f5784dd91b29dd03dce975f81f00198e9b8ff4dd895b6"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/not-authorized-role.json",
+      "size": 1066,
+      "sha256": "4584ed2c3d6f4d2fd881e439f8a90f1967bf69633676428a3ec42a74d81264da"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/package-not-allowed.json",
+      "size": 991,
+      "sha256": "30a3e9e6f1e3ed9d1695f9d02e682ba54c80ba01b77161ad094cbd7fa4da2f81"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/profile-pinned.json",
+      "size": 630,
+      "sha256": "663a41b3daa2ed0c777b99209b0dbea7ff9bffb1fa3c524c800212c9cd71dba4"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/relations-only-lowered.json",
+      "size": 496,
+      "sha256": "1c961966faf42db898d714f9bdfa0b3b9757f74bda3966aa3a254b5222924c5b"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/review-required.json",
+      "size": 849,
+      "sha256": "64f88e8aa8fd661be5720c658c2955153edb77234359cf0d572a2399b0a80e8d"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/signature-optional.json",
+      "size": 1056,
+      "sha256": "8cadc91b99c2bbb320cc078171708c6ea1e4091c0bff74a87508e65528a2e2d3"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/signature-required.json",
+      "size": 1117,
+      "sha256": "fa3807bb70fd8ce4e6bcf8d3f67b0fa0defcb806f756d04c03fb373898c7321c"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/unknown-signer.json",
+      "size": 1069,
+      "sha256": "a80221c307147000c195d246d58ddb7717dd0d2d9eda6f35f8aee9809dd9628f"
+    },
+    {
+      "path": "pap/fixtures/pap-v0.1/trust-policy/unsigned-valid.json",
+      "size": 549,
+      "sha256": "3925e9979d558d3f10ec60a77b41dbea9eaf56e0294e8efbc10578046bc20cae"
+    },
+    {
+      "path": "pap/fixtures/vectors/e4-identity-form.json",
+      "size": 6719,
+      "sha256": "8e107d7620e1b3ca6b8377f765e3d6175d093aef6ebc70413718d1809579a7e9"
+    },
+    {
+      "path": "pap/schemas/check-record.schema.json",
+      "size": 8288,
+      "sha256": "e1d95707899db4ccb1fb0e198ba7e077edb0d752c4c61a267a9b7f73f60c69b7"
+    },
+    {
+      "path": "pap/schemas/claims-producer-report.schema.json",
+      "size": 2264,
+      "sha256": "7fd4b94fa5dd947b4e0ca1279a37eff297001cb1f44879b9a766a6aae2c8ff5c"
+    },
+    {
+      "path": "pap/schemas/claims-provenance.schema.json",
+      "size": 2023,
+      "sha256": "5b371fcd26b532db4e5999705d6067e18659ba3664f065c5c387a5538bcbba8a"
+    },
+    {
+      "path": "pap/schemas/claims-relations.schema.json",
+      "size": 2154,
+      "sha256": "476fd5bb55c7ed37a28e69524bf6af97978df238803dc59d348d95ffca41d785"
+    },
+    {
+      "path": "pap/schemas/claims-reviews.schema.json",
+      "size": 2558,
+      "sha256": "e7ae5a394a7e01170ee912fe1693ad0c12b9af5a79ae50da39213f5ba7aba417"
+    },
+    {
+      "path": "pap/schemas/explanation.schema.json",
+      "size": 1235,
+      "sha256": "6ab1cab310fbf5f39a44c708f17314706aa4aa5c21e5b045ea41f85ab872f384"
+    },
+    {
+      "path": "pap/schemas/inspection.schema.json",
+      "size": 3828,
+      "sha256": "af1858e243d3c086c6649524dc67ca4ad6d9b6c711f0b8a5df4f70324478f08b"
+    },
+    {
+      "path": "pap/schemas/manifest.schema.json",
+      "size": 9633,
+      "sha256": "9d28e0e7faad2fd9c3ba3788237513bdb873c3f0f3bbd1a6ab9f0e9562a8fa26"
+    },
+    {
+      "path": "pap/schemas/trust-policy.schema.json",
+      "size": 8569,
+      "sha256": "be70c90261318703823523995837d21f8d97c189030334b8fd939ce65fa6e949"
+    },
+    {
+      "path": "pap/schemas/verification-report.schema.json",
+      "size": 17206,
+      "sha256": "c3fe36da46fa2f75b74d3deea405bf4c80eebcfb281116e2dcdaa54bde01bc99"
+    }
+  ],
+  "bundle_local": [
+    {
+      "path": "snapshot/source-provenance.md",
+      "size": 1364,
+      "sha256": "52387440317a0e30b138b8303c6d85a4e90da02d2ef2a240897163e6daebe613",
+      "origin": "bundle-local"
+    }
+  ]
+}

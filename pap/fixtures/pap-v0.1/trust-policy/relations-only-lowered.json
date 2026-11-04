@@ -1,0 +1,26 @@
+{
+  "trustPolicyVersion": "0.1",
+  "id": "policy-acme-relations-limits-2026-11",
+  "issuedAt": "2026-11-01T00:00:00Z",
+  "expiresAt": "2026-12-01T00:00:00Z",
+  "signature": {
+    "mode": "disabled"
+  },
+  "keys": [],
+  "signers": [],
+  "checkers": [],
+  "profiles": [],
+  "requiredChecks": [
+    "pap.check.relation-consistency/1"
+  ],
+  "requiredDimensions": [
+    "checks"
+  ],
+  "humanReview": {
+    "required": false,
+    "maxAgeSeconds": 2592000
+  },
+  "limits": {
+    "fileBytes": 64
+  }
+}

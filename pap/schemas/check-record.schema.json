@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:pap:0.1:check-record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "checkId",
+    "checkVersion",
+    "subjectDigests",
+    "scope",
+    "checker",
+    "outcome",
+    "witnesses",
+    "diagnostics"
+  ],
+  "properties": {
+    "checkId": {
+      "type": "string",
+      "pattern": "^pap\\.check\\.[a-z0-9-]+/[0-9]+$"
+    },
+    "checkVersion": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "subjectDigests": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "package"
+      ],
+      "properties": {
+        "package": {
+          "$ref": "#/$defs/digest"
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "digest"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "digest": {
+                "$ref": "#/$defs/digest"
+              }
+            }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "digest"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "digest": {
+                "$ref": "#/$defs/digest"
+              }
+            }
+          }
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "digest"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "digest": {
+                "$ref": "#/$defs/digest"
+              }
+            }
+          }
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "digest"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "provenance",
+                  "relations",
+                  "producerReport",
+                  "reviews"
+                ]
+              },
+              "digest": {
+                "$ref": "#/$defs/digest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bindings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "entities": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edges": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unavailable": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "checker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "implementationDigest"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementationDigest": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "outcome": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNSUPPORTED",
+        "NOT_EVALUATED"
+      ]
+    },
+    "witnesses": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/recomputedDigest"
+          },
+          {
+            "$ref": "#/$defs/sourceSpan"
+          },
+          {
+            "$ref": "#/$defs/relationViolations"
+          }
+        ]
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "severity",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^pap\\.[a-z0-9.-]+$"
+          },
+          "severity": {
+            "enum": [
+              "error",
+              "warning",
+              "info"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "recomputedDigest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "subject",
+        "algorithm",
+        "declared",
+        "computed"
+      ],
+      "properties": {
+        "type": {
+          "const": "recomputed-digest"
+        },
+        "subject": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "artifact",
+                "source",
+                "input",
+                "claim"
+              ]
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        },
+        "algorithm": {
+          "const": "sha256"
+        },
+        "declared": {
+          "$ref": "#/$defs/digest"
+        },
+        "computed": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "sourceSpan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "sourceId",
+        "sourceDigest",
+        "range",
+        "quoteDigest",
+        "extractedDigest"
+      ],
+      "properties": {
+        "type": {
+          "const": "source-span"
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceDigest": {
+          "$ref": "#/$defs/digest"
+        },
+        "range": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "end": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "quoteDigest": {
+          "$ref": "#/$defs/digest"
+        },
+        "extractedDigest": {
+          "$ref": "#/$defs/digest"
+        },
+        "quoteBase64": {
+          "type": "string",
+          "description": "Standard base64 (RFC 4648 \u00a74) of the extracted span; informational."
+        }
+      }
+    },
+    "relationViolations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "violations"
+      ],
+      "properties": {
+        "type": {
+          "const": "relation-violation-list"
+        },
+        "violations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "code",
+              "subject",
+              "detail"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "pattern": "^pap\\.[a-z0-9.-]+$"
+              },
+              "subject": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

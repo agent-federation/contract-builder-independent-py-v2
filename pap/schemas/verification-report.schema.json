@@ -1,0 +1,754 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:pap:0.1:verification-report",
+  "title": "Portable Assurance Package v0.1 verification report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reportVersion",
+    "verifier",
+    "package",
+    "policy",
+    "evaluatedAt",
+    "identities",
+    "dimensions",
+    "checks",
+    "coverage",
+    "limitations",
+    "verdict",
+    "diagnostics"
+  ],
+  "properties": {
+    "reportVersion": {
+      "const": "0.1"
+    },
+    "verifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "implementationDigest",
+        "checkerIdentities"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementationDigest": {
+          "$ref": "#/$defs/digest"
+        },
+        "checkerIdentities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/digest"
+          }
+        }
+      }
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "papVersion"
+      ],
+      "properties": {
+        "identity": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "papVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "digest": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "enum": [
+            "FRESH",
+            "STALE",
+            "ABSENT"
+          ]
+        },
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "evaluatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "durationMs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "effectiveLimits": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "enum": [
+          "manifestBytes",
+          "payloadFiles",
+          "fileBytes",
+          "totalPayloadBytes",
+          "pathSegments",
+          "pathBytes",
+          "segmentBytes",
+          "jsonNesting",
+          "jsonStringBytes",
+          "claimsFiles",
+          "provenanceBindings",
+          "relationEntities",
+          "relationEdges",
+          "signatureEnvelopes"
+        ]
+      },
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "identities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "packageIdentity",
+        "artifacts",
+        "sources",
+        "normalizedInputDigest",
+        "extensionClosureDigest",
+        "checkerIdentity",
+        "verificationRecordIdentity"
+      ],
+      "properties": {
+        "packageIdentity": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "declared",
+              "computed"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "declared": {
+                "$ref": "#/$defs/digest"
+              },
+              "computed": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/digest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "declared",
+              "computed"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "declared": {
+                "$ref": "#/$defs/digest"
+              },
+              "computed": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/digest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "normalizedInputDigest": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "extensionClosureDigest": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/digest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "checkerIdentity": {
+          "$ref": "#/$defs/digest"
+        },
+        "verificationRecordIdentity": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "integrity",
+        "sources",
+        "signature",
+        "trust",
+        "checks",
+        "humanReview",
+        "semanticTruth",
+        "legalEnforceability"
+      ],
+      "properties": {
+        "integrity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "package",
+            "artifacts"
+          ],
+          "properties": {
+            "package": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "NOT_EVALUATED"
+              ]
+            },
+            "artifacts": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "NOT_EVALUATED"
+              ]
+            }
+          }
+        },
+        "sources": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "integrity",
+            "availability"
+          ],
+          "properties": {
+            "integrity": {
+              "enum": [
+                "PASS",
+                "FAIL",
+                "UNAVAILABLE",
+                "NOT_EVALUATED"
+              ]
+            },
+            "availability": {
+              "enum": [
+                "PASS",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            }
+          }
+        },
+        "signature": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "validity"
+          ],
+          "properties": {
+            "validity": {
+              "enum": [
+                "VALID",
+                "INVALID",
+                "NOT_EVALUATED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "signatures": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "path",
+                  "validity"
+                ],
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "keyId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "algorithm": {
+                    "const": "ed25519"
+                  },
+                  "validity": {
+                    "enum": [
+                      "VALID",
+                      "INVALID",
+                      "NOT_EVALUATED"
+                    ]
+                  },
+                  "signerIdentity": {
+                    "enum": [
+                      "TRUSTED",
+                      "UNTRUSTED",
+                      "UNKNOWN",
+                      "NOT_EVALUATED",
+                      "NOT_APPLICABLE"
+                    ]
+                  },
+                  "policyDecision": {
+                    "enum": [
+                      "ACCEPTED",
+                      "REJECTED",
+                      "STALE",
+                      "NOT_EVALUATED"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "trust": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "signerIdentity",
+            "policyDecision",
+            "checkerRecognition",
+            "profileRecognition"
+          ],
+          "properties": {
+            "signerIdentity": {
+              "enum": [
+                "TRUSTED",
+                "UNTRUSTED",
+                "UNKNOWN",
+                "NOT_EVALUATED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "policyDecision": {
+              "enum": [
+                "ACCEPTED",
+                "REJECTED",
+                "STALE",
+                "NOT_EVALUATED"
+              ]
+            },
+            "checkerRecognition": {
+              "enum": [
+                "PASS",
+                "UNSUPPORTED",
+                "UNTRUSTED",
+                "NOT_EVALUATED",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "profileRecognition": {
+              "enum": [
+                "PASS",
+                "UNSUPPORTED",
+                "UNTRUSTED",
+                "NOT_EVALUATED",
+                "NOT_APPLICABLE"
+              ]
+            }
+          }
+        },
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "results"
+          ],
+          "properties": {
+            "results": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "checkId",
+                  "outcome"
+                ],
+                "properties": {
+                  "checkId": {
+                    "$ref": "#/$defs/checkId"
+                  },
+                  "outcome": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNSUPPORTED",
+                      "NOT_EVALUATED"
+                    ]
+                  },
+                  "required": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "humanReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "PASS",
+                "INCOMPLETE",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "basis": {
+              "const": "unbound-claim",
+              "description": "Required when status is PASS: the approval is a producer claim, not an authenticated approval."
+            }
+          }
+        },
+        "semanticTruth": {
+          "const": "NOT_EVALUATED"
+        },
+        "legalEnforceability": {
+          "const": "NOT_EVALUATED"
+        }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "$ref": "urn:pap:0.1:check-record"
+      }
+    },
+    "producerClaims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "present",
+        "trusted"
+      ],
+      "properties": {
+        "present": {
+          "type": "boolean"
+        },
+        "trusted": {
+          "const": false
+        },
+        "comparison": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "checkId",
+              "claimed",
+              "independentOutcome",
+              "relation"
+            ],
+            "properties": {
+              "checkId": {
+                "$ref": "#/$defs/checkId"
+              },
+              "claimed": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "independentOutcome": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "relation": {
+                "enum": [
+                  "AGREES",
+                  "DISAGREES",
+                  "UNVERIFIABLE",
+                  "NOT_COMPARABLE"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requiredChecks",
+        "checksEvaluated",
+        "checksPassed",
+        "checksFailed",
+        "checksUnsupported",
+        "checksNotEvaluated",
+        "requiredDimensions",
+        "dimensionsEvaluated",
+        "full"
+      ],
+      "properties": {
+        "requiredChecks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/checkId"
+          }
+        },
+        "checksEvaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checksPassed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checksFailed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checksUnsupported": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checksNotEvaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "requiredDimensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dimensionsEvaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "full": {
+          "type": "boolean"
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/limitation"
+      }
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNTRUSTED",
+        "UNSUPPORTED",
+        "INCOMPLETE",
+        "NOT_EVALUATED"
+      ]
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "severity",
+          "scope",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^pap\\.[a-z0-9.-]+$"
+          },
+          "severity": {
+            "enum": [
+              "error",
+              "warning",
+              "info"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "required": [
+          "dimensions"
+        ],
+        "properties": {
+          "dimensions": {
+            "type": "object",
+            "required": [
+              "humanReview"
+            ],
+            "properties": {
+              "humanReview": {
+                "type": "object",
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "PASS"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "type": "object",
+        "required": [
+          "dimensions"
+        ],
+        "properties": {
+          "dimensions": {
+            "type": "object",
+            "required": [
+              "humanReview"
+            ],
+            "properties": {
+              "humanReview": {
+                "type": "object",
+                "required": [
+                  "basis"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "checkId": {
+      "type": "string",
+      "pattern": "^pap\\.check\\.[a-z0-9-]+/[0-9]+$"
+    },
+    "limitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "detail"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^pap\\.[a-z0-9.-]+$"
+        },
+        "detail": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
